@@ -18,10 +18,9 @@ class Wizard extends Component {
     handleInput(e){
         this.setState({Name: e.target.value})
     }
-    handleInput(e){
-        this.setState({Address: e.target.value})
+    handleInput(i){
+        this.setState({Address: i.target.value})
     }
-    
     
 
     render() {
@@ -31,7 +30,8 @@ class Wizard extends Component {
                 <div className="name">
                     Name
                     <input type="Name" onChange={(e) => this.handleInput(e)}/>
-                    
+                    Address
+                    <input type="Address" onChange={(i) => this.handleInput(i)}/>
                 </div>
                     <Link to="/Dashboard"><button> Cancel </button></Link>
             </div>

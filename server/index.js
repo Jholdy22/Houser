@@ -23,14 +23,14 @@ app.post('/api/houses', function(req,res,next){
     req.app.get('db').add_houses([req.body.name, req.body.address, req.body.city, req.body.state, req.body.zipcode])
     .then
         (response => {
-            res.status(200).send('All is well')
+            res.status(200).send(response)
         })
     })
 
     app.delete('/api/houses/:id', function(req, res, next) {
         req.app.get('db').delete_house(req.params.id)
             .then( response => {
-                res.status(200).send('GOOOOOOOONEZOOOOOOOO')
+                res.status(200).send(response)
             })
     })
 
